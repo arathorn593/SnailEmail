@@ -2,7 +2,6 @@ Frontend
 - image scaling
 - actual images
 - create more pages
-- link pages
 
 Backend
 - auto start python script

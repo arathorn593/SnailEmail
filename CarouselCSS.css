@@ -3,7 +3,7 @@
 /* Padding below the footer and lighter body text */
 
 body {
-  padding-bottom: 40px;
+  padding-bottom: 20px;
   color: #5a5a5a;
 }
 
@@ -67,6 +67,11 @@ body {
 -------------------------------------------------- */
 
 /* Center align the text below the carousel */
+#signup
+{
+  margin-bottom: 60px;
+}
+
 .marketing .col-lg-4 {
   margin-bottom: 20px;
   text-align: center;
@@ -79,17 +84,25 @@ body {
   margin-left: 10px;
 }
 
-#inputEmail
+#inputEmail, #entry_205812784
 {
   width:250px;
 }
-#inputSMCNum
+#inputSMCNum, #entry_896956768
 {
-  width:120px;
+  width:125px;
 }
+
+
 
 /* Featurettes
 ------------------------- */
+
+#bottomhalf
+{
+  padding-left: 20px;
+  margin-bottom: 500px;
+}
 
 .featurette-divider {
   margin: 20px 0; /* Space out the Bootstrap <hr> more */
@@ -139,13 +152,45 @@ body {
   }
 }
 
-#footer
+#initials
 {
-  padding-left: 10;
+  border-left: 10;
 }
 
 @media (min-width: 992px) {
   .featurette-heading {
     margin-top: 120px;
   }
+}
+
+@media (max-width: 1024px) {
+  #inputEmail, #entry_205812784
+  {
+    width:150px;
+  }
+  #inputSMCNum, #entry_896956768
+  {
+    width:90px;
+  }
+}
+
+@media (max-width: 768px) {
+  #inputEmail, #entry_205812784
+  {
+    width:100%;
+  }
+  #inputSMCNum, #entry_896956768
+  {
+    width:100%;
+  }
+  #ss-submit
+  {
+    width:100%;
+  }
+}
+
+.invisible
+{
+  position:absolute;
+  visibility:hidden;
 }
