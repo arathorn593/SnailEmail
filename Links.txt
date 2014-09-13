@@ -1,0 +1,3 @@
+SMTP on RaspPi: http://rpi.tnet.com/project/faqs/smtp
+unix commands in python: http://www.cyberciti.biz/faq/python-execute-unix-linux-command-examples/
+auto run script: https://github.com/ihartwig/amtdoor2/blob/master/authCode/doortestd 
