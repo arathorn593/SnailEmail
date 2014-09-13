@@ -1,0 +1,4 @@
+- image scaling
+- actual images
+- create more pages
+- link pages
