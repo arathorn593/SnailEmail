@@ -10,24 +10,11 @@ minHrsBetweenEmails = DEFAULT_MIN_HRS
 lastSend = -minHrsBetweenEmails * 3600000
 box_last_opened = 0
 box_last_movement = 0
-# should probably  figure out how to interface 
-#sender = 'hackathoncmumailbox@gmail.com'
-#receivers = ['alexritos753@gmail.com','jocelynh@andrew.cmu.edu']
-#message = """From: Snail Mail Alert <from@fromdomain.com>
-#To: To Person <to@todomain.com>
-#Subject: SMTP e-mail test
-#
-#This is a test e-mail message.
-#
-#"""
 GPIO.setmode(GPIO.BCM)
 GPIO.setup(PIR_PIN, GPIO.IN)
 GPIO.setup(SWITCH_PIN, GPIO.IN)
+user = ""
 
-#
-#def setup():
-#  pinMode(pirPin, INPUT);
-#  Serial.begin(9600);
 def millis():
 	return int(round(time.time()*1000)) 
 def bash_command(cmd):
@@ -44,6 +31,9 @@ def check_switch():
     if(SWITCH_DEPRESSED==0):
 	box_last_opened = millis()    
 	print "box opened"
+def get_user():
+	#Stubbed
+	return "7863529674@vtext.com"
   
 def send_email():
 	print "Should have emailed"
@@ -53,7 +43,7 @@ def send_email():
        	#	print "Successfully sent email"
     	#except SMTPException:
 	#	print "Error: unable to send email"
-	bash_command('echo "sample"')
+	bash_command('mail -s "You have recieved mail!" < /dev/null "%s"',user)
      
 def loop():
 	while(True):
@@ -74,6 +64,6 @@ def loop():
 		    
   
 		time.sleep(0.5)
-		bash_command('mail -s "Spam Test" "7863529674@vtext.com<< "HI"')
+user=get_user()
 loop()
 
