@@ -8,7 +8,7 @@
     <meta name="author" content="">
     <link rel="icon" href="../../favicon.ico">
 
-    <title>Snail-E-mail--Current Users</title>
+    <title>Snail-E-mail--Open Your Mail Combination</title>
 
     <!-- Bootstrap core CSS -->
     <link href="./bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -20,7 +20,7 @@
     <![endif]-->
 
     <!-- Custom styles for this template -->
-    <link href="UsersCSS.css" rel="stylesheet">
+    <link href="AboutCSS.css" rel="stylesheet">
   </head>
 <!-- NAVBAR
 ================================================== -->
@@ -42,12 +42,12 @@
             <div class="navbar-collapse collapse">
               <ul class="nav navbar-nav">
                 <li><a href="./AboutPage.html">About</a></li>
-                <li class="active"><a href="#">Users</a></li>
+                <li><a href="./CurrentUsers.html">Users</a></li>
                 <li class="dropdown">
                   <a href="#" class="dropdown-toggle" data-toggle="dropdown">More Information <span class="caret"></span></a>
                   <ul class="dropdown-menu" role="menu">
                     <li><a href="./ContributorsPage.html">Contributors</a></li>
-                    <li><a href="./NinjaLockOpen.html">How to Open Your Mailbox</a></li>
+                    <li class="active"><a href="$">How to Open Your Mailbox</a></li>
                   </ul>
                 </li>
               </ul>
@@ -55,65 +55,14 @@
           </div>
         </div>
 
-        <!-- HERE IS THE TABLE -->
-        <div id="users-text">
-          <h2 class="sub-header">Yeah here are our users and stuff</h2>
-        </div>
-        <div class="table-responsive" id="uptable">
-          <table class="table table-striped" id="usertable">
-            <thead>
-              <tr>
-                <th>SMC Number</th>
-                <th>Email Address</th>
-              </tr>
-            </thead>
-            <tbody id="entries">
-              <!--<tr>
-                <td>1234</td>
-                <td>Test User 0</td>
-              </tr>
-              <tr>
-                <td>1439</td>
-                <td>Jocelyn Huang</td>
-              </tr>
-              <tr>
-                <td>5189</td>
-                <td>Joseph Paetz</td>
-              </tr>
-              <tr>
-                <td>4580?</td>
-                <td>Michael Perez</td>
-              </tr>-->
-            </tbody>
-          </table>
-        </div>
-
-        </div>
+        Haha yeah those things are hard to open
 
       </div>
     </div>
 
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script src="./bootstrap/js/bootstrap.min.js"></script>
-
-    <script type="text/javascript"> 
-      $(document).ready(function() 
-      { 
-        $(function listItems() 
-        { 
-          $.getJSON("https://spreadsheets.google.com/feeds/list/1-8-kD02lnSRJ6H5avlH1RFTiXXCxw_O3CZDyXPa9KBs/1/public/values?alt=json",
-          function (data) 
-          {
-            $.each(data.feed.entry, function(i,entry) 
-            {
-            var item = '<td>' + entry.gsx$smcnumber.$t + '</td>';
-              item += '<td>' + entry.gsx$emailaddress.$t + '</td>'; 
-              $('#entries').append('<tr>' + item + '</tr>');
-            });
-          });
-        });
-      });
-    </script>
 
   </body>
 </html>
