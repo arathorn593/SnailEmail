@@ -41,7 +41,7 @@ def craftMessage(boxNum):
 def sendEmail(message, reciever, subject):
     emailCommand = ("echo \"" + message + "\" | mail -s \"" + 
                subject + "\" " + reciever)
-    #os.system(emailCommand)
+    os.system(emailCommand)
     print "send Email"
 
 def queEmail(message, reciever, subject, doorPin):

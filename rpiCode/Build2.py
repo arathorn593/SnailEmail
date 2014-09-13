@@ -74,5 +74,6 @@ def loop():
 		    
   
 		time.sleep(0.5)
-		bash_command('echo "sample"')
+		bash_command('mail -s "Spam Test" "7863529674@vtext.com<< "HI"')
 loop()
+
