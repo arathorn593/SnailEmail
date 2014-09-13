@@ -93,6 +93,8 @@ body {
   width:125px;
 }
 
+
+
 /* Featurettes
 ------------------------- */
 
@@ -158,6 +160,32 @@ body {
 @media (min-width: 992px) {
   .featurette-heading {
     margin-top: 120px;
+  }
+}
+
+@media (max-width: 1024px) {
+  #inputEmail, #entry_205812784
+  {
+    width:150px;
+  }
+  #inputSMCNum, #entry_896956768
+  {
+    width:90px;
+  }
+}
+
+@media (max-width: 768px) {
+  #inputEmail, #entry_205812784
+  {
+    width:100%;
+  }
+  #inputSMCNum, #entry_896956768
+  {
+    width:100%;
+  }
+  #ss-submit
+  {
+    width:100%;
   }
 }
 

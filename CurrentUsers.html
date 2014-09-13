@@ -69,44 +69,57 @@
           <table class="table table-striped">
             <thead>
               <tr>
-                <th>#</th>
                 <th>SMC Number</th>
-                <th>Test</th>
+                <th>Email Address</th>
               </tr>
             </thead>
-            <tbody>
-              <tr>
-                <td>0</td>
+            <tbody id="entries">
+              <!--<tr>
                 <td>1234</td>
                 <td>Test User 0</td>
               </tr>
               <tr>
-                <td>1</td>
                 <td>1439</td>
                 <td>Jocelyn Huang</td>
               </tr>
               <tr>
-                <td>2</td>
                 <td>5189</td>
                 <td>Joseph Paetz</td>
               </tr>
               <tr>
-                <td>3</td>
                 <td>4580?</td>
                 <td>Michael Perez</td>
-              </tr>
+              </tr>-->
             </tbody>
           </table>
         </div>
 
         </div>
 
-
       </div>
     </div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script src="./bootstrap/js/bootstrap.min.js"></script>
+
+    <script type="text/javascript"> 
+      $(document).ready(function() 
+      { 
+        $(function listItems() 
+        { 
+          $.getJSON("https://spreadsheets.google.com/feeds/list/1-8-kD02lnSRJ6H5avlH1RFTiXXCxw_O3CZDyXPa9KBs/1/public/values?alt=json",
+          function (data) 
+          {
+            $.each(data.feed.entry, function(i,entry) 
+            {
+            var item = '<td>' + entry.gsx$smcnumber.$t + '</td>';
+              item += '<td>' + entry.gsx$emailaddress.$t + '</td>'; 
+              $('#entries').append('<tr>' + item + '</tr>');
+            });
+          });
+        });
+      });
+    </script>
 
   </body>
 </html>
