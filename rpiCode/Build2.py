@@ -1,4 +1,4 @@
-import smtplib
+import subprocess
 import RPi.GPIO as GPIO, time
 
 SWITCH_PIN = 23
@@ -29,7 +29,9 @@ GPIO.setup(SWITCH_PIN, GPIO.IN)
 #  pinMode(pirPin, INPUT);
 #  Serial.begin(9600);
 def millis():
-	return int(round(time.time()*1000))
+	return int(round(time.time()*1000)) 
+def bash_command(cmd):
+	subprocess.Popen(cmd,shell=True,executable ='/bin/bash')
 
 def check_PIR():
     PIR_DETECTED = GPIO.input(PIR_PIN)
@@ -51,6 +53,7 @@ def send_email():
        	#	print "Successfully sent email"
     	#except SMTPException:
 	#	print "Error: unable to send email"
+	bash_command('echo "sample"')
      
 def loop():
 	while(True):
@@ -71,5 +74,5 @@ def loop():
 		    
   
 		time.sleep(0.5)
-	
+		bash_command('echo "sample"')
 loop()
