@@ -41,7 +41,7 @@ body {
 /* Carousel base class */
 .carousel {
   height: 500px;
-  margin-bottom: 60px;
+  margin-bottom: 40px;
 }
 /* Since positioning the image, we need to help out the caption */
 .carousel-caption {
@@ -63,10 +63,10 @@ body {
 
 
 
-/* MARKETING CONTENT
+/* Signup
 -------------------------------------------------- */
 
-/* Center align the text within the three columns below the carousel */
+/* Center align the text below the carousel */
 .marketing .col-lg-4 {
   margin-bottom: 20px;
   text-align: center;
@@ -92,7 +92,7 @@ body {
 ------------------------- */
 
 .featurette-divider {
-  margin: 80px 0; /* Space out the Bootstrap <hr> more */
+  margin: 20px 0; /* Space out the Bootstrap <hr> more */
 }
 
 /* Thin out the marketing headings */
@@ -137,6 +137,11 @@ body {
   .featurette-heading {
     font-size: 50px;
   }
+}
+
+#footer
+{
+  padding-left: 10;
 }
 
 @media (min-width: 992px) {
