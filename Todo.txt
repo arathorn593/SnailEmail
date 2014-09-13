@@ -1,4 +1,10 @@
+Frontend
 - image scaling
 - actual images
 - create more pages
 - link pages
+
+Backend
+- auto start python script
+- send emails from python script
+- write logic for detecting movement
