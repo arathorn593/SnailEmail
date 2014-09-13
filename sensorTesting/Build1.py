@@ -12,7 +12,7 @@ box_last_opened = 0
 box_last_movement = 0
 # should probably  figure out how to interface 
 sender = 'hackathoncmumailbox@gmail.com'
-receivers = ['alexritos753@gmail.com','jocelyn@andrew.cmu.edu']
+receivers = ['alexritos753@gmail.com','jocelynh@andrew.cmu.edu']
 message = """From: Snail Mail Alert <from@fromdomain.com>
 To: To Person <to@todomain.com>
 Subject: SMTP e-mail test
@@ -44,17 +44,17 @@ def send_email():
      
 def loop():
 	while(True):
-		now = millis()
-		check_PIR()
-		check_switch()
+	now = millis()
+	check_PIR()
+	check_switch()
 		
-		if(now-box_last_opened>30000):
-                    if (PIR_DETECTED):
-			if (now > (lastSend + minHrsBetweenEmails)):
-				send_email(now)
-				lastSend = now
+	if(now-box_last_opened>30000):
+            if (PIR_DETECTED):
+	        if (now > (lastSend + minHrsBetweenEmails)):
+		    send_email(now)
+                    lastSend = now
 		    
-  
-		sleep(500)
+
+        sleep(500)
 	
 
