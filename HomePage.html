@@ -9,7 +9,7 @@
     <meta name="author" content="">
     <link rel="icon" href="../../favicon.ico">
 
-    <title>Carousel Template for Bootstrap</title>
+    <title>Snail-E-mail</title>
 
     <!-- Bootstrap core CSS -->
     <link href="./bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -38,13 +38,12 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
               </button>
-              <a class="navbar-brand" href="#">Snail Email</a>
+              <a class="navbar-brand" href="#">Snail-E-mail</a>
             </div>
             <div class="navbar-collapse collapse">
               <ul class="nav navbar-nav">
-                <li class="active"><a href="#">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="./CurrentUsers.html">Users</a></li>
+                <li><a href="./ContributorsPage.html">Contributors</a></li>
                 <li class="dropdown">
                   <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <span class="caret"></span></a>
                   <ul class="dropdown-menu" role="menu">
@@ -123,40 +122,46 @@
     <div class="container marketing">
 
       <!-- Three columns of text below the carousel (the circle things)-->
-      <div class="row">
+      <div id="signup" class="row">
           <div class="col-lg-6 col-lg-offset-4">
           <h2>Interested? Sign Up Below!</h2></div>
         <div class="col-lg-7 col-lg-offset-4">
-        <form class="form-inline">
+        <form action="https://docs.google.com/forms/d/1FwszQeiR1zkSpX6kdpkZwZsu-4DIVKOX1ZzPFpkQHoY/formResponse?embedded=true" method="POST" id="ss-form" target="_self" onsubmit="" class="form-inline">
           <div class="form-group">
-            <!--<label for="inputEmail">Email:</label>-->
-            <input type="email" class="form-control" id="inputEmail" placeholder="Email">
+            <input type="email" name="entry.205812784" value="" class="ss-q-short form-control" id="entry_205812784" dir="auto" aria-label="Email Address  Must be a valid email address" aria-required="true" required="" title="Must be a valid email address" placeholder="Email">
           </div>
           <div class="form-group">
-            <!--<label for="inputSMCNum">SMC Number: </label>-->
-            <input type="SMCNum" class="form-control" id="inputSMCNum" placeholder="SMC Number">
+            <input type="number" name="entry.896956768" value="" class="ss-q-short form-control" id="entry_896956768" dir="auto" aria-label="SMC Number Your 4-Digit SMC Number Must be a number between 0 and 10,000" aria-required="true" required="" step="any" title="Must be a number between 0 and 10,000" placeholder="SMC Number">
           </div>
-          <button type="submit" class="btn btn-primary">Go!</button>
-        </form>
+            <input type="hidden" name="entry.8304959" value="" class="ss-q-short" id="entry_8304959" dir="auto" aria-label="Name  " title="">
+        <input type="hidden" name="draftResponse" value="[,,&quot;-2981913207519946224&quot;]
+        ">
+        <input type="hidden" name="pageHistory" value="0">
+
+
+        <input type="hidden" name="fbzx" value="-2981913207519946224">
+        <input type="submit" name="submit" value="Go!" id="ss-submit" class="jfk-button jfk-button-action btn btn-primary">
+      </form>
+        <!--<iframe id="googleform" src="https://docs.google.com/forms/d/1FwszQeiR1zkSpX6kdpkZwZsu-4DIVKOX1ZzPFpkQHoY/viewform?embedded=true" width="760" height="500" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>-->
         </div>
       </div>
-          <p><p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
-          <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+
         </div><!-- /.col-lg-4 -->
 
       </div><!-- /.row -->
 
 
       <!-- START THE FEATURETTES -->
-
+      <div id=bottomhalf>
       <hr class="featurette-divider">
         <div class="col-md-7">
-          <h2 class="featurette-heading">First featurette heading. <span class="text-muted">It'll blow your mind.</span></h2>
-          <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+          <h2 class="featurette-heading">Snail-E-mail. <span class="text-muted">Bringing/Delivering(?) paper to paperless.</span></h2>
+          <p class="lead">I'm really tired of seeing stuff I can't understand so here have this random text. Also it's like 4am and I really need sleep.</p>
         </div>
         <div class="col-md-5">
           <img class="img-responsive" src="Mailbox.png" alt="MAILTIME">
         </div>
+      </div>
 
       <hr class="featurette-divider">
 
@@ -174,6 +179,19 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script src="./bootstrap/js/bootstrap.min.js"></script>
+
+    <!--<script>
+      $("#submitInfo").click(function(){
+        var email = $("#inputEmail").val();
+        var smc   = $("#inputSMCNum").val();
+
+        $("#entry_205812784").val(email);
+        $("#entry_896956768").val(smc);
+        
+        alert($("#ss-submit"));
+        $("form#ss-form").submit();
+      });
+    </script>-->
 
   </body>
 </html>
