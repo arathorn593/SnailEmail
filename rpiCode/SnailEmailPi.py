@@ -53,7 +53,7 @@ class SMCBox:
                 if(self.doorOpen()):
                     self.checkForMail = False
                 elif(self.movement()):
-                    self.sendEmail()
+                    self.queEmail()
             elif(not self.doorOpen() and not self.movement()):
                 self.checkForMail = True
         else:
@@ -61,29 +61,29 @@ class SMCBox:
                 self.emailSent = False
         print "checkForMail =", str(self.checkForMail), " emailSent =", str(self.emailSent)
 
-    def sendEmail(self):       
-        message = """Hello owner of mailbox %s
-            You have new mail!!! Congratulations!!!
-        """
-        message = message % (str(self.boxNum))
+    def sendEmail(self):
+        greeting = """Hello owner of mailbox %s,\n"""
+        greeting = greeting % (str(self.boxNum))
+        message = (greeting + "You have (Snail) mail!\n" +
+                   'www.youtube.com/embed/gFBLiHpkcOk') 
         emailCommand = ("echo \"" + message + "\" | mail -s \"" + 
                    self.emailSubject + "\" " + self.emailAddr)
         os.system(emailCommand)
         print "send Email"
         self.emailSent = True
 
-'''
-def queEmail(message, reciever, subject, doorPin):
-    print "QueEmail"
-    delay = 30 #in seconds
-    for x in xrange(delay):
-        print "Sending email in", delay - x, "seconds"
-        if(doorOpen(doorPin)):
-            return False
-        time.sleep(1)
-    sendEmail(message, reciever, subject)
-    return True
-'''
+
+    def queEmail(self):
+        print "QueEmail"
+        delay = 1 #in seconds
+        for x in xrange(delay):
+            print "Sending email in", delay - x, "seconds"
+            if(self.doorOpen() or not self.movement()):
+                return None
+            time.sleep(1)
+        self.sendEmail()
+    
+
 
 def loop():
     #the checkNewMail and emailSent variables could be implemented better
